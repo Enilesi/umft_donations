@@ -1,5 +1,6 @@
+import React from "react";
 import { useState } from 'react'
-import DonationPage from './pages/DonationPage.tsx'
+import DonationPage from './pages/DonationPage'
 function App() {
   const [count, setCount] = useState(0)
 
