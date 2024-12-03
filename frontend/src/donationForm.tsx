@@ -32,7 +32,7 @@ const CheckoutForm = () => {
     }
   
     const { clientSecret, error: backendError } = await fetch(
-      '/api/create-payment-intent',
+      'https://umft-donations-backend.vercel.app/create-payment-intent',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

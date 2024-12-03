@@ -16,9 +16,9 @@ app.post("/create-payment-intent", async (req, res) => {
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: amount * 100, 
-      currency: "usd",
+      currency: "ron",
       automatic_payment_methods: { enabled: true },
-      description:"test"
+      description:"Donatie caritabila catre UMFT"
 
     });
 
