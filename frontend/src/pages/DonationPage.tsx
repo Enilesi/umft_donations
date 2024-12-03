@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../assets/components/btn"; // Ensure the path to the Button component is correct
+import DonationForm from "../donationForm";
 
 function DonationPage() {
   return (
@@ -52,6 +53,7 @@ function DonationSection() {
       <h2 className="text-xl font-semibold text-gray-900 mb-3">
         Donează pentru Spitalul de Copii "Louis Țurcanu"
       </h2>
+      <DonationForm/>
       <p className="text-sm text-gray-800 mb-6 leading-relaxed">
         TimMedfest & MedTalents vă invită să contribuiți în pragul sărbătorilor
         de iarnă la cauza noastră umanitară, donând Spitalului de Copii "Louis

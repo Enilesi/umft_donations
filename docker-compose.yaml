@@ -1,0 +1,61 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    ports:
+      - '5000:5000'
+    volumes:
+      - ./backend:/app
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
+    profiles:
+      - dev
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - '5173:5173'
+    volumes:
+      - ./frontend:/app
+    environment:
+      - NODE_ENV=development
+    command: npm run dev -- --host
+    depends_on:
+      - backend
+    profiles:
+      - dev
+
+
+  backend_prod:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod
+    environment:
+      - NODE_ENV=production
+    ports:
+      - '5000:5000'
+    profiles:
+      - prod
+    networks:
+      - app-network
+
+  frontend_prod:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    ports:
+      - '80:80'
+    depends_on:
+      - backend_prod
+    profiles:
+      - prod
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
