@@ -27,7 +27,7 @@ app.post("/create-payment-intent", async (req, res) => {
     res.send({ error: error.message });
   }
 });
-
+app.get("/", (req, res) => res.send("Get test"));
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
