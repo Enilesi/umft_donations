@@ -63,9 +63,9 @@ const CheckoutForm = () => {
       onSubmit={handleSubmit}
       className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md"
     >
-      <h2 className="text-2xl mb-4 text-center text-gold-500">Donate Now</h2>
+      <h2 className="text-2xl mb-4 text-center text-gold-500">  Donează acum</h2>
       <div className="mb-4">
-        <label className="block mb-2">Amount (USD)</label>
+        <label className="block mb-2">Suma (RON)</label>
         <input
           type="number"
           value={amount}
@@ -75,8 +75,8 @@ const CheckoutForm = () => {
         />
       </div>
       <div className="mb-4">
-        <label className="block mb-2">Card Details</label>
-        <CardElement className="p-2 border border-gray-300 rounded-md" />
+        <label className="block mb-2">Detalii card</label>
+        <CardElement options={{ hidePostalCode: true }} className="p-2 border border-gray-300 rounded-md" />
       </div>
       {message && (
         <div className="mb-4 text-center text-red-500">{message}</div>
@@ -86,7 +86,7 @@ const CheckoutForm = () => {
         disabled={!stripe}
         className="w-full py-2 px-4 bg-gold-500 text-white rounded-md hover:bg-gold-600"
       >
-        Donate
+        Donează
       </button>
     </form>
   );
