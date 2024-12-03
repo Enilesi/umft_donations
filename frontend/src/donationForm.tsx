@@ -27,7 +27,7 @@ const CheckoutForm = () => {
     const cardElement = elements.getElement(CardElement);
   
     if (!cardElement) {
-      setMessage('Card element not found');
+      setMessage('A aparut o eroare');
       return;
     }
   
@@ -52,9 +52,9 @@ const CheckoutForm = () => {
     });
   
     if (error) {
-      setMessage(error.message || 'An error occurred');
+      setMessage(error.message || 'A aparut o eroare, va rugam incercati din nout sau contactati-ne');
     } else {
-      setMessage('Donation successful! Thank you for your support.');
+      setMessage('Donatie efectuata cu succes!');
     }
   };
   
