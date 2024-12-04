@@ -78,9 +78,24 @@ const EventSection: React.FC = () => {
         Universitatea de Medicină și Farmacie „Victor Babeș” din Timișoara!
         🩺🎤🫀🩰
       </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-800">
+        <EventDetail
+          title="🎼 Ce este TimMedFest?"
+          content="TimMedFest este un festival de muzică înființat în urmă cu 20 de ani, sub inițiativă studențească, ajuns la ediția 25."
+        />
+        <EventDetail
+          title="🎭 Ce este MedTalents?"
+          content="Un concurs al studenților mediciniști pentru promovarea artei și strângerea de fonduri pentru spitalul „Louis Țurcanu” din Timișoara."
+        />
+        <EventDetail
+          title="🎬 Cui îi este adresat?"
+          content="Studenților, profesorilor, elevilor, și tuturor celor pasionați de muzică, dans și teatru!"
+        />
+      </div>
     </section>
   );
 };
+
 
 const EventArrival: React.FC = () => {
   return (
