@@ -1,14 +1,17 @@
 import React from "react";
-import { useState } from 'react'
-import DonationPage from './pages/DonationPage'
-function App() {
-  const [count, setCount] = useState(0)
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import DonationPage from "./pages/DonationPage";
+import DonationForm from "./pages/DonationFormPage";
 
+const App: React.FC = () => {
   return (
-    <>
-     <DonationPage></DonationPage>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<DonationPage />} />
+        <Route path="/donație" element={<DonationForm />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
