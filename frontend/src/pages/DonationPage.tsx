@@ -23,8 +23,7 @@ const Header: React.FC = () => {
             Contribuiți la Cauza Noastră Umanitară
           </h1>
           <p className="text-base md:text-lg font-normal leading-relaxed text-gray-200">
-            Sprijiniți Spitalul de Copii "Louis Țurcanu" și ajutați viețile
-            fragile care au nevoie de noi.
+            Sprijiniți Spitalul de Copii "Louis Țurcanu" alături de noi.
           </p>
           <div className="mt-6">
             <Button
@@ -60,7 +59,7 @@ const DonationSection: React.FC = () => {
         de iarnă la cauza noastră umanitară, donând Spitalului de Copii "Louis
         Țurcanu" în așa fel încât să fim alături de viețile celor mai mici
         dintre noi! Orice sumă donată poate contribui în viitor la îmbunătățirea
-        calității și chiar salvarea acestor vieți fragile.
+        calității și chiar salvarea unor vieți.
       </p>
     </section>
   );
