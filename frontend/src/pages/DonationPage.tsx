@@ -19,11 +19,11 @@ const Header: React.FC = () => {
     <header className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-r from-blue-700 via-purple-700 to-red-700 text-white">
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative z-10 text-center px-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4 mt-[5%] text-gray-50">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 mt-[5%] text-gray-50">
             Contribuiți la Cauza Noastră Umanitară
           </h1>
           <p className="text-base md:text-lg font-normal leading-relaxed text-gray-200">
-            Sprijiniți Spitalul de Copii "Louis Țurcanu" alături de noi.
+            Sprijiniți Spitalul de Copii "Louis Țurcanu" alături de noi, printr-o donație în perioada <span className="font-bold text-gray-50">5 decembrie</span> - <span className="font-bold text-gray-50">7 ianuarie</span>.
           </p>
           <div className="mt-6">
             <Button
@@ -38,6 +38,7 @@ const Header: React.FC = () => {
   );
 };
 
+
 const MainContent: React.FC = () => {
   return (
     <main className="w-full py-12 px-4 flex flex-col items-center space-y-12">
@@ -51,7 +52,7 @@ const MainContent: React.FC = () => {
 const DonationSection: React.FC = () => {
   return (
     <section className="w-full max-w-[80%] bg-gradient-to-r from-violet-100 to-indigo-100 rounded-lg shadow-lg p-8 text-center">
-      <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+      <h2 className="text-2xl font-semibold text-gray-900 mb-6">
         Donează pentru Spitalul de Copii "Louis Țurcanu"
       </h2>
       <p className="text-base text-gray-800 mb-6 leading-relaxed">
@@ -64,6 +65,7 @@ const DonationSection: React.FC = () => {
     </section>
   );
 };
+
 
 const EventSection: React.FC = () => {
   return (
