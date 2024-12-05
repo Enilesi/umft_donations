@@ -55,7 +55,7 @@ const DonationSection: React.FC = () => {
       <h2 className="text-2xl font-semibold text-gray-900 mb-6">
         Donează pentru Spitalul de Copii "Louis Țurcanu"
       </h2>
-      <p className="text-base text-gray-800 mb-6 leading-relaxed">
+      <p className="text-base text-gray-800 mb-4 leading-relaxed">
         TimMedfest & MedTalents vă invită să contribuiți în pragul sărbătorilor
         de iarnă la cauza noastră umanitară, donând Spitalului de Copii "Louis
         Țurcanu" în așa fel încât să fim alături de viețile celor mai mici

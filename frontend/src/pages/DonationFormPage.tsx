@@ -10,7 +10,7 @@ import {
 import Button from "../assets/components/circleBtn"; // Ensure correct path
 
 const stripePromise = loadStripe(
-  "pk_test_51QRfWCG8ThibllyjL7ZnEhgs26fHbYjIRps6tZcqd5kbYQ8WbI3ACZKHBLP1MyBCo0OgVxrirWXmvQmK85rpcPXo00VpBZDhbZ"
+  "pk_live_51QRfWCG8ThibllyjSHq75VAbrKTPQ1XAzGcjEUEEyDFTkxX7qbUg9k9DsbFWLEeP5gK0oH3QGc3sWlAtZKB3j1v500l0tKKYV2"
 );
 
 const CheckoutForm: React.FC = () => {
