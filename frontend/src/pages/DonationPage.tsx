@@ -2,19 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../assets/components/btn";
 
-const DonationPage: React.FC = () => {
-  return (
-    <div className="min-h-screen  bg-indigo-300 text-gray-900">
-      <Header />
-      <MainContent />
-      <Footer />
-    </div>
-  );
-};
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
-
+  
   return (
     <header className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-r from-blue-700 via-purple-700 to-red-700 text-white">
       <div className="absolute inset-0 flex items-center justify-center">
@@ -30,7 +21,7 @@ const Header: React.FC = () => {
               text="Donează Acum"
               onClick={() => navigate("/donație")}
               className="bg-transparent"
-            />
+              />
           </div>
         </div>
       </div>
@@ -39,15 +30,6 @@ const Header: React.FC = () => {
 };
 
 
-const MainContent: React.FC = () => {
-  return (
-    <main className="w-full py-12 px-4 flex flex-col items-center space-y-12">
-      <DonationSection />
-      <EventSection />
-      <EventArrival />
-    </main>
-  );
-};
 
 const DonationSection: React.FC = () => {
   return (
@@ -66,6 +48,19 @@ const DonationSection: React.FC = () => {
   );
 };
 
+interface EventDetailProps {
+  title: string;
+  content: string;
+}
+
+const EventDetail: React.FC<EventDetailProps> = ({ title, content }) => {
+  return (
+    <div className="bg-gradient-to-r from-indigo-200 to-indigo-200 p-6 rounded-lg">
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-base text-gray-800">{content}</p>
+    </div>
+  );
+};
 
 const EventSection: React.FC = () => {
   return (
@@ -84,15 +79,15 @@ const EventSection: React.FC = () => {
         <EventDetail
           title="🎼 Ce este TimMedFest?"
           content="TimMedFest este un festival de muzică înființat în urmă cu 20 de ani, sub inițiativă studențească, ajuns la ediția 25."
-        />
+          />
         <EventDetail
           title="🎭 Ce este MedTalents?"
           content="Un concurs al studenților mediciniști pentru promovarea artei și strângerea de fonduri pentru spitalul „Louis Țurcanu” din Timișoara."
-        />
+          />
         <EventDetail
           title="🎬 Cui îi este adresat?"
           content="Studenților, profesorilor, elevilor, și tuturor celor pasionați de muzică, dans și teatru!"
-        />
+          />
       </div>
     </section>
   );
@@ -109,29 +104,16 @@ const EventArrival: React.FC = () => {
         <EventDetail
           title="⏰ Când?"
           content="7 decembrie, începând cu ora 19"
-        />
+          />
         <EventDetail
           title="🌃 Unde?"
           content="Clubul Heaven, Strada Ripensia, Nr. 40, Timișoara"
-        />
+          />
       </div>
     </section>
   );
 };
 
-interface EventDetailProps {
-  title: string;
-  content: string;
-}
-
-const EventDetail: React.FC<EventDetailProps> = ({ title, content }) => {
-  return (
-    <div className="bg-gradient-to-r from-indigo-200 to-indigo-200 p-6 rounded-lg">
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-base text-gray-800">{content}</p>
-    </div>
-  );
-};
 
 const SponsorsSection: React.FC = () => {
   const logos = [
@@ -141,7 +123,7 @@ const SponsorsSection: React.FC = () => {
     "/images/umft-logos/timmedfest.png",
     
   ];
-
+  
   return (
     <section className="w-full mb-4 bg-transparent text-center">
       <h2 className="text-2xl font-semibold text-gray-100 mb-8">
@@ -154,11 +136,20 @@ const SponsorsSection: React.FC = () => {
               src={logo}
               alt={`Sponsor Logo ${index + 1}`}
               className="h-20 w-auto"
-            />
+              />
           </div>
         ))}
       </div>
     </section>
+  );
+};
+const MainContent: React.FC = () => {
+  return (
+    <main className="w-full py-12 px-4 flex flex-col items-center space-y-12">
+      <DonationSection />
+      <EventSection />
+      <EventArrival />
+    </main>
   );
 };
 
@@ -171,4 +162,13 @@ const Footer: React.FC = () => {
   );
 };
 
+const DonationPage: React.FC = () => {
+  return (
+    <div className="min-h-screen  bg-indigo-300 text-gray-900">
+      <Header />
+      <MainContent />
+      <Footer />
+    </div>
+  );
+};
 export default DonationPage;
