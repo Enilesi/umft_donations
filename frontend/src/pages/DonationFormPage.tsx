@@ -7,7 +7,7 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 
-import Button from "../assets/components/circleBtn"; // Ensure correct path
+import Button from "../assets/components/circleBtn"; 
 
 const stripePromise = loadStripe(
   "pk_live_51QRfWCG8ThibllyjSHq75VAbrKTPQ1XAzGcjEUEEyDFTkxX7qbUg9k9DsbFWLEeP5gK0oH3QGc3sWlAtZKB3j1v500l0tKKYV2"
